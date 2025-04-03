@@ -1,5 +1,6 @@
 // # Llamar al framework de express
 const express = require('express')
+const petsRoutes = require('./api/v1/pets')
 
 //#2a Crear una instancia de express
 const app = express()
@@ -10,8 +11,10 @@ app.use(express.json())
 
 //#3 Definir rutas
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World g37a, welcomeeee!')
 })
+
+app.use(petsRoutes)
 
 //#4 Levantar el servidor
 app.listen(port, () => {
